@@ -13,7 +13,9 @@ npm run preview
 
 根目录 `.env` 提供官方 Windows 安装包地址。在 `.env.local` 设置 `VITE_CLIENT_DOWNLOAD_URL` 可覆盖默认值，也可在构建环境设置同名变量。必须是完整的 HTTP(S) 下载地址，不能放密钥。修改后重启开发服务或重新构建。地址为空或无效时，页面显示未配置提示，不会生成空链接。
 
-版权页的 `docs/public/license.txt` 是主项目 `LICENSE` 的副本；主仓条款变化时应同步。教程截图取自原生客户端；首页屏幕内的冰蓝纹理是装饰图，并非客户端界面。
+Windows 原生客户端 0.3.1 及其构建源码按 GPL-3.0-or-later 授权，可商用和转售。第三方组件各自遵循其许可证。未纳入此次授权的其他软件、官网代码、文档与素材继续适用原条款。授权范围见[版权页](docs/copyright.md)，纯文本入口为 [license.txt](docs/public/license.txt)。
+
+教程截图取自原生客户端；首页屏幕内的冰蓝纹理是装饰图，并非客户端界面。
 
 ## GitHub Actions CI
 
