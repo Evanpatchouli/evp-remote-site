@@ -1,0 +1,62 @@
+name: Site CI
+
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+
+      - name: Verify built pages and assets
+        run: |
+          python3 - <<'PY'
+          from html.parser import HTMLParser
+          from pathlib import Path
+          from urllib.parse import unquote, urljoin, urlsplit
+
+          docs = Path("docs")
+          dist = docs / ".vitepress/dist"
+
+          def require_file(path):
+              if not path.is_file() or path.stat().st_size == 0:
+                  raise SystemExit(f"Missing or empty build output: {path}")
+
+          class Assets(HTMLParser):
+              def handle_starttag(self, tag, attrs):
+                  attrs = dict(attrs)
+                  ref = attrs.get("href") if tag == "link" else attrs.get("src")
+                  if ref:
+                      url = urlsplit(urljoin(page_url, ref))
+                      if not url.scheme and not url.netloc:
+                          require_file(dist / unquote(url.path).lstrip("/"))
+
+          for source in [docs / "index.md", docs / "copyright.md", *(docs / "guide").glob("*.md")]:
+              require_file(dist / source.relative_to(docs).with_suffix(".html"))
+
+          for asset in ["brand.png", "brand.webp", "glacier.webp", "license.txt"]:
+              require_file(dist / asset)
+
+          for page in dist.rglob("*.html"):
+              page_url = "/" + page.relative_to(dist).as_posix()
+              Assets().feed(page.read_text(encoding="utf-8"))
+          PY
+
+      - name: Upload static site
+        uses: actions/upload-artifact@v4
+        with:
+          name: evp-remote-site
+          path: docs/.vitepress/dist/
+          if-no-files-found: error

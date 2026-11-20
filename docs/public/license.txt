@@ -1,0 +1,53 @@
+EVP Remote Non-Commercial License 1.0
+
+1. Scope
+
+This license covers the original EVP Remote client, signaling server, and
+accompanying project code, scripts, documentation and assets distributed with
+this license (the Software), in source or binary form. Each rights holder grants
+permission only for material they have the right to license. No ownership is
+transferred. Separately licensed material is excluded; see section 4.
+
+2. Permission for non-commercial use only
+
+Subject to these terms, you may use, run, host, study, copy and modify the
+Software, and distribute original or modified copies free of charge, solely for
+non-commercial purposes. Examples include accessing your personal devices and
+helping a friend for free, when neither activity serves a commercial purpose.
+
+No direct or indirect commercial use is permitted under this license. This means
+any use or distribution for commercial advantage, monetary compensation or to
+support a profit-making activity, whether for yourself or for someone else.
+Prohibited uses include resale or rental; use in a company's internal business
+operations, including remote work and IT support for its profit-making business;
+paid remote assistance, hosting, consulting or managed services; and bundling or
+offering the Software with a paid product, subscription, advertising or sales
+promotion. Charging nothing for the Software itself does not make such use
+non-commercial. Commercial use requires separate permission from the relevant
+rights holders.
+
+3. Sharing copies
+
+With every copy you distribute, include this license and retain all applicable
+copyright, attribution and third-party notices. Clearly identify any changes
+you made. The same non-commercial terms must accompany the covered portions in
+modified copies; do not present a modified version as an official release.
+
+4. Independent rights and earlier grants
+
+Third-party components and materials remain subject to their own terms. This
+license neither grants nor restricts rights under those terms, including rights
+to replace or modify a library or reverse engineer for debugging such changes.
+Do not distribute a combination if its applicable terms cannot be satisfied
+together. Nothing here limits rights you have without this license under
+applicable law.
+
+This license applies only to copies offered under it. It does not revoke,
+narrow or replace rights already granted for earlier copies or versions; those
+rights continue under the terms on which they were granted.
+
+5. Warranty and liability
+
+To the extent permitted by applicable law, the Software is provided as is,
+without warranty of any kind. To that same extent, the rights holders are not
+liable for loss or damage arising from use or distribution of the Software.

@@ -1,0 +1,226 @@
+{
+  "devices.md": {
+    "source": "docs/guide/devices.md",
+    "source_sha256": "ba894078e0631eca1a83ffa2d128cee4caaa70422b99213c7926ddf3f4a5e43c",
+    "snapshot_sha256": "c3d8dd02422dead1929854186c40aa563c6b96c7adcb3fcec98d4249f34f6ff8",
+    "lines": {
+      "1": 1,
+      "3": 3,
+      "5": 5,
+      "6": 6,
+      "7": 7,
+      "11": 11
+    },
+    "excluded": [
+      {
+        "line": 9,
+        "source": "![我的设备中的远控开关和连接选中设备按钮](/shots/devices.png)"
+      }
+    ]
+  },
+  "join.md": {
+    "source": "docs/guide/join.md",
+    "source_sha256": "a9b1aca539720cef2088820e3bc6d94e7858b12580988936d50878de939b788d",
+    "snapshot_sha256": "e77e00ffafe622c2bc3b35399e1bc8bb48931d76b2c7785a0bd18c896a7994e9",
+    "lines": {
+      "1": 1,
+      "3": 3,
+      "5": 5,
+      "6": 6,
+      "7": 7,
+      "11": 11
+    },
+    "excluded": [
+      {
+        "line": 9,
+        "source": "![远程协助页中的邀请码输入框和请求连接按钮](/shots/join.png)"
+      }
+    ]
+  },
+  "pair.md": {
+    "source": "docs/guide/pair.md",
+    "source_sha256": "1f396b48c4785725ac85020fecb5ed0460cb46a232190aeffc9d33140ce036c8",
+    "snapshot_sha256": "c054b377778650c143c23053e9e8e568dd4ab3351384e3f2d66ce138bfefd1da",
+    "lines": {
+      "1": 1,
+      "3": 3,
+      "5": 5,
+      "6": 6,
+      "7": 7,
+      "11": 11
+    },
+    "excluded": [
+      {
+        "line": 9,
+        "source": "![我的设备页中生成配对码与请求配对的位置](/shots/pair.png)"
+      }
+    ]
+  },
+  "revoke.md": {
+    "source": "docs/guide/revoke.md",
+    "source_sha256": "3f0c4a0450862e6e2f043e8b2089a8114577246501f3149314f08bcac20805e0",
+    "snapshot_sha256": "68a4262324123baaa5bc71850ca72cfee874d159ae658f835362e793d041b3be",
+    "lines": {
+      "1": 1,
+      "3": 3,
+      "5": 5,
+      "7": 7,
+      "9": 9,
+      "11": 11,
+      "15": 15
+    },
+    "excluded": [
+      {
+        "line": 13,
+        "source": "![设备列表中的移除配对按钮与允许远控开关](/shots/revoke.png)"
+      }
+    ]
+  },
+  "session.md": {
+    "source": "docs/guide/session.md",
+    "source_sha256": "5b80b229f9f7a8fb226468c871ff8ddcbfafd7b33e8b27d9a67989d82955afb0",
+    "snapshot_sha256": "0bc6836874480731a9b5c822329e486904a35e93b9120f9a25f79ccceee74f58",
+    "lines": {
+      "1": 1,
+      "3": 3,
+      "5": 5,
+      "7": 7,
+      "9": 9,
+      "11": 11,
+      "13": 13
+    },
+    "excluded": []
+  },
+  "share.md": {
+    "source": "docs/guide/share.md",
+    "source_sha256": "cdc47e1c3c726d85438a6128d7ea9b4926d4302ac49df6018328dc7c17417e68",
+    "snapshot_sha256": "b2432bd04e494b4752403908630ce1044058eeddb3d671afeb5f5d2710e6fd92",
+    "lines": {
+      "1": 1,
+      "3": 3,
+      "5": 5,
+      "6": 6,
+      "7": 7,
+      "11": 11,
+      "13": 13
+    },
+    "excluded": [
+      {
+        "line": 9,
+        "source": "![共享本机页上用于设置有效期和创建邀请码的位置](/shots/share.png)"
+      }
+    ]
+  },
+  "start.md": {
+    "source": "docs/guide/start.md",
+    "source_sha256": "0b4c88ae19af8903b5992ccb2f793f1a0ca8ef24fe7dedb154a2fdf9b2ae9833",
+    "snapshot_sha256": "f72f8ba0fb4b895e830b57ac7804dea964d91b2633261c3ab76461f9cb8ccd3c",
+    "lines": {
+      "1": 1,
+      "3": 3,
+      "7": 7,
+      "9": 9,
+      "11": 11,
+      "13": 13,
+      "14": 14,
+      "15": 15,
+      "19": 19,
+      "21": 21
+    },
+    "excluded": [
+      {
+        "line": 5,
+        "source": "<ClientDownload />"
+      },
+      {
+        "line": 17,
+        "source": "![设置中心内的信令服务器地址、部署密钥和保存按钮](/shots/settings.png)"
+      }
+    ]
+  },
+  "update.md": {
+    "source": "docs/guide/update.md",
+    "source_sha256": "238cf04da539458fa3a04b561e480e38366c57a5a5587daa5a7c021566b2fce6",
+    "snapshot_sha256": "9528cf7ae414f96fbdb49ab98071148bbbe601f18764f95e2115d93b813f707e",
+    "lines": {
+      "1": 1,
+      "3": 3,
+      "5": 5,
+      "6": 6,
+      "7": 7,
+      "11": 11
+    },
+    "excluded": [
+      {
+        "line": 9,
+        "source": "![设置中心关于页中的检查更新入口](/shots/update.png)"
+      }
+    ]
+  },
+  "copyright.md": {
+    "source": "docs/copyright.md",
+    "source_sha256": "0dceebf77aa42aeb95dbebc9489aa098bf15ac3b09ccceec35db057bbb3fb0b3",
+    "snapshot_sha256": "d5797ab1f5985d61f35fab047a87e1f3da8b52c43e511d77dd5ac9803ab4bacc",
+    "lines": {
+      "1": 1,
+      "3": 3,
+      "5": 5,
+      "7": 7,
+      "9": 9,
+      "11": 11,
+      "12": 12,
+      "13": 13,
+      "14": 14,
+      "16": 16,
+      "18": 18,
+      "20": 20,
+      "22": 22
+    },
+    "excluded": []
+  },
+  "Home.md": {
+    "source": "docs/.vitepress/theme/Home.vue",
+    "source_sha256": "8072987eb79163b5f218a901d1cd6bc9603ed5531c180db90a35b5e20b3d8830",
+    "snapshot_sha256": "dbe5b3c83ddaba1177f738d3c30a9e6f577225f5dcc530624ac17e0ea6d4985f",
+    "lines": {
+      "1": 9,
+      "3": 9,
+      "5": 11,
+      "7": 11,
+      "9": 12,
+      "11": 12
+    },
+    "excluded": [
+      "脚本、模板标记、属性、装饰图形、纯英文品牌与编号；下载组件按定义去重。"
+    ]
+  },
+  "OrbitHero.md": {
+    "source": "docs/.vitepress/theme/OrbitHero.vue",
+    "source_sha256": "cb400efa0989dfbf3f6af63f985a6e7d7789ef9afbf90556cd0e08cecd567d6e",
+    "snapshot_sha256": "212e3b452c1c82c8a0a14a3ec56624b056b25f560facc91fe3c0a14c19341cc5",
+    "lines": {
+      "1": 88,
+      "3": 89,
+      "5": 91,
+      "7": 91,
+      "9": 91,
+      "11": 91,
+      "13": 91
+    },
+    "excluded": [
+      "脚本、模板标记、属性、装饰图形、纯英文品牌与编号；下载组件按定义去重。"
+    ]
+  },
+  "ClientDownload.md": {
+    "source": "docs/.vitepress/theme/ClientDownload.vue",
+    "source_sha256": "3209d81fe2a3e8c438730f11dbf7b990a123c6a52d759d0b088005115665d733",
+    "snapshot_sha256": "72f205177f530038e559768858832deff6488b767a1b2b2a0725f9757de634cb",
+    "lines": {
+      "1": 7,
+      "3": 8
+    },
+    "excluded": [
+      "脚本、模板标记、属性、装饰图形、纯英文品牌与编号；下载组件按定义去重。"
+    ]
+  }
+}

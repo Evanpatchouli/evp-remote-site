@@ -1,0 +1,490 @@
+{
+  "meta": {
+    "n_candidates": 41,
+    "n_rename": 23,
+    "n_cohesion": 16,
+    "n_colon": 1,
+    "n_iso3": 1,
+    "truncated": false
+  },
+  "rename": [
+    {
+      "type": "rename",
+      "file": "copyright.md",
+      "line": 3,
+      "para": "严禁倒卖。Evp Remote 的非商业许可证不授权任何直接或间接的商业用途。 免费下载、能看到源码，都不等于可以拿它做生意。",
+      "label": "1组",
+      "confidence": "高",
+      "reason": "“商业用途”换成口语“做生意”解释禁止倒卖；保留许可证术语和读者能识别的日常说法。",
+      "disposition": "保留",
+      "source_line": 3
+    },
+    {
+      "type": "rename",
+      "file": "copyright.md",
+      "line": 7,
+      "para": "在不涉及商业目的的前提下，你可以连接自己的电脑，为亲友免费提供协助，也可以自行部署、研究或修改软件。免费转发原版或修改版时，须随附完整许可证，保留版权、署名及第三方声明。修改版须标明改动，不得冒充官方发行版，受许可约束的部分仍须随附相同条款。",
+      "label": "0组",
+      "confidence": "高",
+      "reason": "原版、修改版和官方发行版指向不同版本；许可证文件与具体条款各有含义。",
+      "disposition": "保留",
+      "source_line": 7
+    },
+    {
+      "type": "rename",
+      "file": "copyright.md",
+      "line": 20,
+      "para": "条款适用于随许可证分发的项目原创客户端、信令服务、代码、脚本、文档和资源，包括源码和二进制。第三方组件仍按各自条款使用；此前已经授予的权利不因本许可而撤销或缩减。",
+      "label": "0组",
+      "confidence": "高",
+      "reason": "原创项目与第三方组件分属不同许可；已授予的权利另有所指。",
+      "disposition": "保留",
+      "source_line": 20
+    },
+    {
+      "type": "rename",
+      "file": "devices.md",
+      "line": 3,
+      "para": "在家中电脑上允许远控后，你可以用已配对的电脑连回来，不必每次找人确认。",
+      "label": "0组",
+      "confidence": "高",
+      "reason": "家中电脑与已配对电脑分任被控端和控制端。",
+      "disposition": "保留",
+      "source_line": 3
+    },
+    {
+      "type": "rename",
+      "file": "devices.md",
+      "line": 11,
+      "para": "列表显示在线表示客户端已连上信令服务器，不代表桌面已解锁。若刚锁过屏，请在目标电脑上解锁，等它重新上线，再发起连接。",
+      "label": "0组",
+      "confidence": "高",
+      "reason": "在线状态、信令连接及解锁状态是三个不同判断；重新上线描述状态变化。",
+      "disposition": "保留",
+      "source_line": 11
+    },
+    {
+      "type": "rename",
+      "file": "join.md",
+      "line": 3,
+      "para": "在用来操作对方桌面的电脑上打开客户端。先确认双方保存了同一个服务器地址；接收邀请不用填写部署密钥。",
+      "label": "0组",
+      "confidence": "高",
+      "reason": "服务器地址和部署密钥是两种不同的设置。",
+      "disposition": "保留",
+      "source_line": 3
+    },
+    {
+      "type": "rename",
+      "file": "join.md",
+      "line": 11,
+      "para": "如果提示这是配对码，请到配对两台电脑查看用法。邀请码已用过或过期时，请对方重新创建。",
+      "label": "0组",
+      "confidence": "高",
+      "reason": "配对码与邀请码适用的操作不同。",
+      "disposition": "保留",
+      "source_line": 11
+    },
+    {
+      "type": "rename",
+      "file": "pair.md",
+      "line": 3,
+      "para": "配对适合自己的电脑。两端先在连接设置保存同一服务器地址和部署密钥。打开 我的设备，等两边都显示 本机在线。",
+      "label": "0组",
+      "confidence": "高",
+      "reason": "两端与两边字面近同，本机在线是界面状态。",
+      "disposition": "保留",
+      "source_line": 3
+    },
+    {
+      "type": "rename",
+      "file": "pair.md",
+      "line": 11,
+      "para": "默认需要本人确认。勾选 持码免本机确认 会预先批准首个有效配对请求，请勿公开配对码。配对只让两台电脑记住彼此，不会自动共享屏幕。要从外面连回来，还须在目标电脑上允许可信设备远控。",
+      "label": "0组",
+      "confidence": "高",
+      "reason": "持码免本机确认是选项名，预先批准首个请求解释选项的作用。",
+      "disposition": "保留",
+      "source_line": 11
+    },
+    {
+      "type": "rename",
+      "file": "revoke.md",
+      "line": 3,
+      "para": "临时不想让其他设备连进来，可以保留配对。若不再信任某台电脑，请直接移除它。",
+      "label": "0组",
+      "confidence": "高",
+      "reason": "其他设备指一组，某台电脑指从中选出的一台；“它”是代词。",
+      "disposition": "保留",
+      "source_line": 3
+    },
+    {
+      "type": "rename",
+      "file": "revoke.md",
+      "line": 7,
+      "para": "在被控端打开 我的设备，取消勾选 允许可信设备远控本机（无需逐次确认）。当前传入的远控会话会结束，已配对设备仍保留在列表里。",
+      "label": "0组",
+      "confidence": "高",
+      "reason": "远控权限、当前会话和配对记录各有对象。",
+      "disposition": "保留",
+      "source_line": 7
+    },
+    {
+      "type": "rename",
+      "file": "revoke.md",
+      "line": 11,
+      "para": "在同一页选中对方设备，点 移除配对。即使对方离线也可以移除。对方列表里可能还有旧记录，但不能再用它连接这台电脑。",
+      "label": "0组",
+      "confidence": "高",
+      "reason": "“对方设备”简写为“对方”；旧记录指列表里的条目。",
+      "disposition": "保留",
+      "source_line": 11
+    },
+    {
+      "type": "rename",
+      "file": "session.md",
+      "line": 3,
+      "para": "连上后，控制端会打开独立窗口。点击远程画面，再用鼠标或键盘操作对方电脑。",
+      "label": "0组",
+      "confidence": "高",
+      "reason": "独立窗口是容器，远程画面是点击目标。",
+      "disposition": "保留",
+      "source_line": 3
+    },
+    {
+      "type": "rename",
+      "file": "session.md",
+      "line": 7,
+      "para": "两端都使用原生客户端时，点工具栏中分辨率和帧率旁的下拉箭头，可以更改码率上限或目标帧率。本次会话立即生效。点 全屏 隐藏工具栏；按 Ctrl + Alt + F11 恢复。",
+      "label": "0组",
+      "confidence": "高",
+      "reason": "分辨率、帧率和码率各有含义，全屏是另一个操作。",
+      "disposition": "保留",
+      "source_line": 7
+    },
+    {
+      "type": "rename",
+      "file": "session.md",
+      "line": 11,
+      "para": "控制端点 结束控制，或关闭远程控制窗口。被控端可以点 结束共享，也可以用桌面上的浮动停止按钮断开。",
+      "label": "0组",
+      "confidence": "高",
+      "reason": "结束控制与结束共享是两端各自的按钮。",
+      "disposition": "保留",
+      "source_line": 11
+    },
+    {
+      "type": "rename",
+      "file": "session.md",
+      "line": 13,
+      "para": "关闭主窗口不会退出客户端。 它仍在 Windows 通知区域运行。要彻底退出，右键托盘图标，选 退出 EVP 远程。使用邀请码建立的会话断开后，需要新码才能重连。",
+      "label": "0组",
+      "confidence": "高",
+      "reason": "通知区域是位置，托盘图标是操作对象；新码是下一次连接的凭证。",
+      "disposition": "保留",
+      "source_line": 13
+    },
+    {
+      "type": "rename",
+      "file": "share.md",
+      "line": 3,
+      "para": "在需要别人协助的电脑上操作。对方连入后能看到整个主屏幕，也能使用键盘和鼠标。请先收好不想展示的内容。",
+      "label": "0组",
+      "confidence": "高",
+      "reason": "整个主屏幕是可见范围，展示的内容是其中的信息。",
+      "disposition": "保留",
+      "source_line": 3
+    },
+    {
+      "type": "rename",
+      "file": "share.md",
+      "line": 11,
+      "para": "持码免本机确认 会跳过第 3 步，首个成功使用该码的人即可控制本机。临时找人帮忙时，建议保留默认的本机确认。邀请码只能成功使用一次；过期后要创建新码。",
+      "label": "0组",
+      "confidence": "高",
+      "reason": "该码和新码均为邀请码的指代或省略；“本机确认”区分开关状态。",
+      "disposition": "保留",
+      "source_line": 11
+    },
+    {
+      "type": "rename",
+      "file": "start.md",
+      "line": 3,
+      "para": "要操作另一台电脑，两台都要运行 Evp Remote。请先向提供服务的人索取信令服务器地址。创建邀请码或使用「我的设备」的一方还需要部署密钥。",
+      "label": "0组",
+      "confidence": "高",
+      "reason": "信令服务器地址与部署密钥是不同资料。",
+      "disposition": "保留",
+      "source_line": 3
+    },
+    {
+      "type": "rename",
+      "file": "start.md",
+      "line": 9,
+      "para": "安装版按提示安装后，从开始菜单打开 EVP Remote。如果拿到的是便携版，双击文件名以 portable.exe 结尾的程序即可。若是 ZIP 压缩包，请先完整解压，再运行 EvpRemote.exe。",
+      "label": "0组",
+      "confidence": "高",
+      "reason": "三个发行形式有不同启动步骤；文件名举例不构成别名。",
+      "disposition": "保留",
+      "source_line": 9
+    },
+    {
+      "type": "rename",
+      "file": "start.md",
+      "line": 19,
+      "para": "同一地址下，密钥留空会保留原来的值。要删除旧密钥，勾选 清除已保存的密钥 再保存。有会话或待处理的邀请时，请先结束再改设置。",
+      "label": "0组",
+      "confidence": "高",
+      "reason": "留空、清除和保存描述不同操作；旧密钥指已有的值。",
+      "disposition": "保留",
+      "source_line": 19
+    },
+    {
+      "type": "rename",
+      "file": "update.md",
+      "line": 3,
+      "para": "客户端启动后会检查稳定版，也可以手动查看。更新会结束当前会话并重启客户端，请先保存远程桌面上正在处理的工作。",
+      "label": "0组",
+      "confidence": "高",
+      "reason": "检查与安装更新是前后两个动作。",
+      "disposition": "保留",
+      "source_line": 3
+    },
+    {
+      "type": "rename",
+      "file": "update.md",
+      "line": 11,
+      "para": "便携版会替换原来的 EXE。安装版和 ZIP 版通过安装程序更新；原先解压的 ZIP 目录不会自动删掉。当前 Windows 用户的连接设置和配对关系会保留。",
+      "label": "0组",
+      "confidence": "高",
+      "reason": "ZIP 版是发行形式，ZIP 目录是解压后的位置。",
+      "disposition": "保留",
+      "source_line": 11
+    }
+  ],
+  "cohesion": [
+    {
+      "type": "cohesion",
+      "file": "copyright.md",
+      "line": 7,
+      "prev_tail": "免费下载、能看到源码，都不等于可以拿它做生意",
+      "next_head": "在不涉及商业目的的前提下，你可以连接自己的电脑，为亲友免费提供协助，也可以自行部署、研究或修改软件",
+      "label": "明确承接",
+      "confidence": "中",
+      "reason": "前句限制商业用途，后句列明非商业条件下允许的用途。",
+      "disposition": "保留",
+      "source_line": 7
+    },
+    {
+      "type": "cohesion",
+      "file": "copyright.md",
+      "line": 16,
+      "prev_tail": "修改版须标明改动，不得冒充官方发行版，受许可约束的部分仍须随附相同条款",
+      "next_head": "商业使用须另行取得相关权利人的许可",
+      "label": "有关但转换突然",
+      "confidence": "中",
+      "reason": "从修改版分发义务切到商业使用的另行许可，中间略过了禁止用途清单。",
+      "disposition": "保留",
+      "source_line": 16
+    },
+    {
+      "type": "cohesion",
+      "file": "copyright.md",
+      "line": 20,
+      "prev_tail": "本页不授予商业授权",
+      "next_head": "条款适用于随许可证分发的项目原创客户端、信令服务、代码、脚本、文档和资源，包括源码和二进制",
+      "label": "有关但转换突然",
+      "confidence": "中",
+      "reason": "从商业授权转到条款覆盖的作品种类。",
+      "disposition": "保留",
+      "source_line": 20
+    },
+    {
+      "type": "cohesion",
+      "file": "devices.md",
+      "line": 11,
+      "prev_tail": "在家中电脑上允许远控后，你可以用已配对的电脑连回来，不必每次找人确认",
+      "next_head": "列表显示在线表示客户端已连上信令服务器，不代表桌面已解锁",
+      "label": "有关但转换突然",
+      "confidence": "中",
+      "reason": "从已配对免确认转到在线状态的含义，接口缺少设备列表操作。",
+      "disposition": "保留",
+      "source_line": 11
+    },
+    {
+      "type": "cohesion",
+      "file": "Home.md",
+      "line": 11,
+      "prev_tail": "默认需要本人同意，才会共享桌面",
+      "next_head": "两台电脑配对一次",
+      "label": "有关但转换突然",
+      "confidence": "中",
+      "reason": "从亲友同意共享切到两台设备配对，卡片标题承担分流。",
+      "disposition": "保留",
+      "source_line": 12
+    },
+    {
+      "type": "cohesion",
+      "file": "join.md",
+      "line": 11,
+      "prev_tail": "接收邀请不用填写部署密钥",
+      "next_head": "如果提示这是配对码，请到配对两台电脑查看用法",
+      "label": "有关但转换突然",
+      "confidence": "中",
+      "reason": "从部署密钥要求转到粘贴错码后的提示。",
+      "disposition": "保留",
+      "source_line": 11
+    },
+    {
+      "type": "cohesion",
+      "file": "pair.md",
+      "line": 11,
+      "prev_tail": "打开 我的设备，等两边都显示 本机在线",
+      "next_head": "默认需要本人确认",
+      "label": "有关但转换突然",
+      "confidence": "中",
+      "reason": "从两端上线转到本机确认，接口未含中间的请求步骤。",
+      "disposition": "保留",
+      "source_line": 11
+    },
+    {
+      "type": "cohesion",
+      "file": "revoke.md",
+      "line": 7,
+      "prev_tail": "若不再信任某台电脑，请直接移除它",
+      "next_head": "在被控端打开 我的设备，取消勾选 允许可信设备远控本机（无需逐次确认）",
+      "label": "有关但转换突然",
+      "confidence": "中",
+      "reason": "上一句处置不再信任的单机，下一句切回暂停所有可信设备。",
+      "disposition": "保留",
+      "source_line": 7
+    },
+    {
+      "type": "cohesion",
+      "file": "revoke.md",
+      "line": 11,
+      "prev_tail": "当前传入的远控会话会结束，已配对设备仍保留在列表里",
+      "next_head": "在同一页选中对方设备，点 移除配对",
+      "label": "明确承接",
+      "confidence": "中",
+      "reason": "设备仍在列表，下一句沿用同一列表操作其中一台。",
+      "disposition": "保留",
+      "source_line": 11
+    },
+    {
+      "type": "cohesion",
+      "file": "session.md",
+      "line": 7,
+      "prev_tail": "点击远程画面，再用鼠标或键盘操作对方电脑",
+      "next_head": "两端都使用原生客户端时，点工具栏中分辨率和帧率旁的下拉箭头，可以更改码率上限或目标帧率",
+      "label": "有关但转换突然",
+      "confidence": "中",
+      "reason": "从操控远程画面转到工具栏的传输设置。",
+      "disposition": "保留",
+      "source_line": 7
+    },
+    {
+      "type": "cohesion",
+      "file": "session.md",
+      "line": 11,
+      "prev_tail": "按 Ctrl + Alt + F11 恢复",
+      "next_head": "控制端点 结束控制，或关闭远程控制窗口",
+      "label": "有关但转换突然",
+      "confidence": "中",
+      "reason": "由恢复全屏工具栏切到结束整个会话。",
+      "disposition": "保留",
+      "source_line": 11
+    },
+    {
+      "type": "cohesion",
+      "file": "session.md",
+      "line": 13,
+      "prev_tail": "被控端可以点 结束共享，也可以用桌面上的浮动停止按钮断开",
+      "next_head": "关闭主窗口不会退出客户端",
+      "label": "有关但转换突然",
+      "confidence": "中",
+      "reason": "从浮动按钮断开会话切到主窗口关闭后的进程状态。",
+      "disposition": "保留",
+      "source_line": 13
+    },
+    {
+      "type": "cohesion",
+      "file": "share.md",
+      "line": 11,
+      "prev_tail": "请先收好不想展示的内容",
+      "next_head": "持码免本机确认 会跳过第 3 步，首个成功使用该码的人即可控制本机",
+      "label": "有关但转换突然",
+      "confidence": "中",
+      "reason": "由收起私密内容转到免确认开关，中间的操作列表未进入接口。",
+      "disposition": "保留",
+      "source_line": 11
+    },
+    {
+      "type": "cohesion",
+      "file": "start.md",
+      "line": 9,
+      "prev_tail": "创建邀请码或使用「我的设备」的一方还需要部署密钥",
+      "next_head": "安装版按提示安装后，从开始菜单打开 EVP Remote",
+      "label": "有关但转换突然",
+      "confidence": "中",
+      "reason": "从索取密钥转到安装后启动客户端。",
+      "disposition": "保留",
+      "source_line": 9
+    },
+    {
+      "type": "cohesion",
+      "file": "start.md",
+      "line": 19,
+      "prev_tail": "若是 ZIP 压缩包，请先完整解压，再运行 EvpRemote.exe",
+      "next_head": "同一地址下，密钥留空会保留原来的值",
+      "label": "有关但转换突然",
+      "confidence": "中",
+      "reason": "从解压启动转到已保存密钥的留空语义。",
+      "disposition": "保留",
+      "source_line": 19
+    },
+    {
+      "type": "cohesion",
+      "file": "update.md",
+      "line": 11,
+      "prev_tail": "更新会结束当前会话并重启客户端，请先保存远程桌面上正在处理的工作",
+      "next_head": "便携版会替换原来的 EXE",
+      "label": "明确承接",
+      "confidence": "中",
+      "reason": "前句介绍更新的影响，后句具体说明便携版更新对文件的影响。",
+      "disposition": "保留",
+      "source_line": 11
+    }
+  ],
+  "colon": [
+    {
+      "type": "colon",
+      "file": "start.md",
+      "line": 21,
+      "colon_before": "下一步",
+      "colon_after": "共享这台电脑 · 配对自己的两台电脑",
+      "sentence": "下一步：共享这台电脑 · 配对自己的两台电脑",
+      "label": "标题时间比例元数据或版式用途",
+      "confidence": "高",
+      "reason": "“下一步”标示两条导航链接，没有提出待论证的判断。",
+      "disposition": "保留",
+      "source_line": 21
+    }
+  ],
+  "iso3": [
+    {
+      "line": 19,
+      "sents": [
+        "同一地址下，密钥留空会保留原来的值",
+        "要删除旧密钥，勾选 清除已保存的密钥 再保存",
+        "有会话或待处理的邀请时，请先结束再改设置"
+      ],
+      "file": "start.md",
+      "label": "部分同构",
+      "confidence": "高",
+      "reason": "三句都有前置限定，但第一句陈述留空结果，后两句分别给出删除、暂停设置的指令，主谓成分无法逐项对应。",
+      "disposition": "保留",
+      "source_line": 19
+    }
+  ]
+}
