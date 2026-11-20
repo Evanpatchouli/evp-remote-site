@@ -1,5 +1,6 @@
 <script setup>
 import { nextTick, onMounted, onBeforeUnmount, ref } from 'vue'
+import { withBase } from 'vitepress'
 
 const stage = ref(null)
 const track = ref(null)
@@ -120,9 +121,9 @@ onBeforeUnmount(() => cleanup())
   <section ref="track" class="orbit-track" :class="{ 'is-static': reduced || paused }" aria-labelledby="home-title">
     <div ref="stage" class="orbit-stage">
       <div class="screen-field" aria-hidden="true"><div v-for="(screen,index) in screens" :key="index" class="orbit-screen" :style="{ '--start-x': pose(screen.phase,index).left, '--start-y': pose(screen.phase,index).top, '--start-pose': pose(screen.phase,index).transform, '--crop': screen.crop + '%', '--hue': (index % 5 - 2) * 9 + 'deg' }"><div class="glass"></div><i></i></div></div>
-      <div class="watermark" aria-hidden="true"><div class="brand-relief"><img v-for="layer in 5" :key="layer" src="/brand.webp" alt="" :style="{ transform: `translateZ(${layer * 2}px)` }"></div></div>
+      <div class="watermark" aria-hidden="true"><div class="brand-relief"><img v-for="layer in 5" :key="layer" :src="withBase('/brand.webp')" alt="" :style="{ transform: `translateZ(${layer * 2}px)` }"></div></div>
       <div class="hero-copy"><p class="kicker"><i></i> WINDOWS REMOTE DESKTOP</p><h1 id="home-title">Evp Remote<span>.</span></h1><p class="lead">用邀请码帮亲友操作电脑，<br>或从设备列表连回自己的 Windows 桌面。</p>
-        <div ref="actionSlot" class="action-slot"><Teleport to="body" :disabled="!floating"><div ref="actions" class="hero-actions" :class="{ 'actions-floating': floating, 'actions-docked': docked, 'actions-still': paused }"><ClientDownload /><a class="guide-action" href="/guide/start.html">使用指南 <span aria-hidden="true">↗</span></a></div></Teleport></div>
+        <div ref="actionSlot" class="action-slot"><Teleport to="body" :disabled="!floating"><div ref="actions" class="hero-actions" :class="{ 'actions-floating': floating, 'actions-docked': docked, 'actions-still': paused }"><ClientDownload /><a class="guide-action" :href="withBase('/guide/start.html')">使用指南 <span aria-hidden="true">↗</span></a></div></Teleport></div>
       </div>
       <div class="stage-foot"><span>Windows x64 客户端 0.3.1 <b>/</b> GPL-3.0-or-later</span><a href="#choose-title">向下探索 ↓</a><button v-if="!reduced" type="button" :aria-pressed="paused" @click="paused = !paused">{{ paused ? '▷ 播放动效' : 'Ⅱ 暂停动效' }}</button><span v-else>静态视图</span></div>
     </div>

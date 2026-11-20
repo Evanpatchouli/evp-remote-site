@@ -7,6 +7,8 @@ on:
 
 permissions:
   contents: read
+  pages: write
+  id-token: write
 
 jobs:
   build:
@@ -17,8 +19,12 @@ jobs:
         with:
           node-version: '24'
           cache: npm
+      - uses: actions/configure-pages@v5
+        id: pages
       - run: npm ci
       - run: npm run build
+        env:
+          SITE_BASE: ${{ steps.pages.outputs.base_path }}/
 
       - name: Verify built pages and assets
         run: |
@@ -26,9 +32,11 @@ jobs:
           from html.parser import HTMLParser
           from pathlib import Path
           from urllib.parse import unquote, urljoin, urlsplit
+          import os
 
           docs = Path("docs")
           dist = docs / ".vitepress/dist"
+          base = os.environ["SITE_BASE"].rstrip("/")
 
           def require_file(path):
               if not path.is_file() or path.stat().st_size == 0:
@@ -41,7 +49,10 @@ jobs:
                   if ref:
                       url = urlsplit(urljoin(page_url, ref))
                       if not url.scheme and not url.netloc:
-                          require_file(dist / unquote(url.path).lstrip("/"))
+                          path = unquote(url.path)
+                          if base and not path.startswith(base + "/"):
+                              raise SystemExit(f"Asset outside site base: {path}")
+                          require_file(dist / path.removeprefix(base).lstrip("/"))
 
           for source in [docs / "index.md", docs / "copyright.md", *(docs / "guide").glob("*.md")]:
               require_file(dist / source.relative_to(docs).with_suffix(".html"))
@@ -50,9 +61,11 @@ jobs:
               require_file(dist / asset)
 
           for page in dist.rglob("*.html"):
-              page_url = "/" + page.relative_to(dist).as_posix()
+              page_url = base + "/" + page.relative_to(dist).as_posix()
               Assets().feed(page.read_text(encoding="utf-8"))
           PY
+        env:
+          SITE_BASE: ${{ steps.pages.outputs.base_path }}/
 
       - name: Upload static site
         uses: actions/upload-artifact@v4
@@ -60,3 +73,17 @@ jobs:
           name: evp-remote-site
           path: docs/.vitepress/dist/
           if-no-files-found: error
+
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: docs/.vitepress/dist/
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-24.04
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

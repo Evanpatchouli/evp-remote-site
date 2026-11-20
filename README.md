@@ -21,4 +21,4 @@ Windows 原生客户端 0.3.1 及其构建源码按 GPL-3.0-or-later 授权，�
 
 本站仓库发布 Release（`release.published`）时会运行 **Site CI**。也可在 **Actions → Site CI → Run workflow** 选择分支并手动运行（`workflow_dispatch`）。这是工作流的全部触发条件。
 
-工作流在 Ubuntu 24.04 上使用 Node.js 24，依次执行 `npm ci` 和 `npm run build`。随后检查首页、版权页和指南页面，以及页面引用的本地脚本、样式表、图片和站点所需的品牌图、纹理与许可文件。检查通过后，可在该次运行的 **Artifacts** 区域下载 `evp-remote-site`，解压即为静态站点根目录。工作流到上传产物为止。
+在仓库 **Settings → Pages → Build and deployment** 中将 Source 设为 **GitHub Actions**。工作流在 Ubuntu 24.04 上使用 Node.js 24 构建和检查站点，然后发布到 GitHub Pages。构建时根据 Pages 地址设置站点基础路径；也可在运行记录的 **Artifacts** 区域下载 `evp-remote-site`。环境 `github-pages` 的保护规则须允许所选分支或 Release 标签部署。
