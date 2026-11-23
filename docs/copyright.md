@@ -1,10 +1,12 @@
 # 版权与许可
 
-## Windows 原生客户端 0.3.1
+## Windows 原生客户端
 
-Evp Remote 0.3.1 的 Windows 原生客户端及用于构建该版本客户端的项目源码，按 **GNU 通用公共许可证第 3 版或任何后续版本（GPL-3.0-or-later）** 授权。你可以在企业中使用客户端、提供收费远程协助，也可以修改客户端，免费分发或转售原版和修改版。
+Evp Remote 0.3.1、0.3.2 和从 0.4.0 起的所有版本的 Windows 原生客户端及其对应源码，按 **GNU 通用公共许可证第 3 版或任何后续版本（GPL-3.0-or-later）** 授权。你可以在企业中使用客户端、提供收费远程协助，也可以修改客户端，免费分发或转售原版和修改版。授权还包括对应版本的项目标识、版本清单，以及构建、安装和打包客户端所用的脚本；具体范围见[客户端许可声明](https://github.com/Evanpatchouli/evp-remote/blob/0.4.0/native/windows/LICENSE)。
 
 分发副本时，请保留版权和许可声明，随附 GPL 许可证，并保留接收者依 GPL 复制、修改和再分发的权利。分发修改版时须注明修改及日期。分发二进制时，须按 GPL 第 6 节规定的方式向接收者提供该版本完整的对应源码。详见 [GNU GPL 第 3 版全文](/gpl-3.0.txt)。
+
+0.4.0 的[客户端对应源码](https://github.com/Evanpatchouli/evp-remote/releases/download/0.4.0/evp-remote-0.4.0-client-source.zip)、[依赖源码和构建资料](https://github.com/Evanpatchouli/evp-remote/releases/download/0.4.0/SOURCE-LOCATIONS.txt)及[校验清单](https://github.com/Evanpatchouli/evp-remote/releases/download/0.4.0/SHA256SUMS.txt)随发布提供。其他版本请查看[发布页面](https://github.com/Evanpatchouli/evp-remote/releases)。
 
 ## 第三方组件与其他项目内容
 
